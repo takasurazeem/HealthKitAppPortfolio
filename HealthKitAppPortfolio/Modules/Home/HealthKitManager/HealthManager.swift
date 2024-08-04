@@ -21,11 +21,13 @@ class HealthManager: ObservableObject {
         self.logger = logger
 
         let steps = HKQuantityType(.stepCount)
-        let healthTypes: Set = [steps]
+        let calories = HKQuantityType(.activeEnergyBurned)
+        let healthTypes: Set = [steps, calories]
         Task {
             do {
                 try await healthStore.requestAuthorization(toShare: [], read: healthTypes)
                 fetchTodaySteps()
+                fetchTodayCalories()
             } catch {
                 print(logger.error("\(error)"))
             }
@@ -58,6 +60,37 @@ class HealthManager: ObservableObject {
                             iconColor: .green
                         )
                     )
+                }
+            }
+        }
+        healthStore.execute(query)
+    }
+    
+    func fetchTodayCalories() {
+        let predicate = HKQuery.predicateForSamples(withStart: .startOfDayForToday, end: Date())
+        let query = HKStatisticsQuery(quantityType: HKQuantityType(.activeEnergyBurned), quantitySamplePredicate: predicate) {
+            [weak self] _,
+            result,
+            error in
+            guard let self = self else { return }
+            if let error {
+                logger.error("Error fetching today's calories: \(error)")
+                return
+            }
+            if let result {
+                let calories = result.sumQuantity()?.doubleValue(for: .kilocalorie()) ?? 0.0
+                DispatchQueue.main.async {
+                    self.activities
+                        .append(
+                            Activity(
+                                id: 1,
+                                title: "Today calories",
+                                subtitle: "Goal: 300",
+                                imageName: "flame",
+                                amount: calories.formattedString,
+                                iconColor: .red
+                            )
+                        )
                 }
             }
         }
