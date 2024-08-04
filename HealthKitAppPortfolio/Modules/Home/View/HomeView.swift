@@ -16,8 +16,9 @@ struct HomeView: View {
     
     var body: some View {
         LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2)) {
-            ActivityCard(activity: .todaySteps)
-            ActivityCard(activity: .todayCalories)
+            ForEach(viewModel.activities) { activity in
+                ActivityCard(activity: activity)
+            }
         }
         .padding()
     }

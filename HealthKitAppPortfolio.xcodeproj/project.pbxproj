@@ -11,6 +11,7 @@
 		F90A409F2C6008BF0014F20B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90A409E2C6008BF0014F20B /* Logger.swift */; };
 		F90A40A22C6008DC0014F20B /* ConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90A40A12C6008DC0014F20B /* ConsoleLogger.swift */; };
 		F90A40A62C600C0D0014F20B /* Date+StartOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90A40A52C600C0D0014F20B /* Date+StartOfDay.swift */; };
+		F90A40AA2C6017420014F20B /* Double+formattedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90A40A92C6017420014F20B /* Double+formattedString.swift */; };
 		F9E1E21B2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E21A2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift */; };
 		F9E1E21D2C5F62C400CF25A2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E21C2C5F62C400CF25A2 /* HomeView.swift */; };
 		F9E1E21F2C5F62C600CF25A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E21E2C5F62C600CF25A2 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		F90A409E2C6008BF0014F20B /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		F90A40A12C6008DC0014F20B /* ConsoleLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLogger.swift; sourceTree = "<group>"; };
 		F90A40A52C600C0D0014F20B /* Date+StartOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StartOfDay.swift"; sourceTree = "<group>"; };
+		F90A40A92C6017420014F20B /* Double+formattedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+formattedString.swift"; sourceTree = "<group>"; };
 		F9E1E2172C5F62C400CF25A2 /* HealthKitAppPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitAppPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E1E21A2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAppPortfolioApp.swift; sourceTree = "<group>"; };
 		F9E1E21C2C5F62C400CF25A2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		F90A40A42C600C0A0014F20B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F90A40A92C6017420014F20B /* Double+formattedString.swift */,
 				F90A40A52C600C0D0014F20B /* Date+StartOfDay.swift */,
 			);
 			path = Extensions;
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E1E23E2C5F82EA00CF25A2 /* Tabs.swift in Sources */,
+				F90A40AA2C6017420014F20B /* Double+formattedString.swift in Sources */,
 				F9E1E21D2C5F62C400CF25A2 /* HomeView.swift in Sources */,
 				F9E1E2392C5F7FA400CF25A2 /* AppMainEntryPoint.swift in Sources */,
 				F90A40A22C6008DC0014F20B /* ConsoleLogger.swift in Sources */,
