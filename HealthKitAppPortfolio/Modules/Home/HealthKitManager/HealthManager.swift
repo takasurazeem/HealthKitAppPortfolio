@@ -23,9 +23,28 @@ class HealthManager: ObservableObject {
         Task {
             do {
                 try await healthStore.requestAuthorization(toShare: [], read: healthTypes)
+                fetchTodaySteps()
             } catch {
                 print(logger.error("\(error)"))
             }
         }
+    }
+    
+    func fetchTodaySteps() {
+        let steps = HKQuantityType(.stepCount)
+        let predicate = HKQuery.predicateForSamples(withStart: .startOfDayForToday, end: Date())
+        
+        let query = HKStatisticsQuery(quantityType: steps, quantitySamplePredicate: predicate) { [weak self] _, result, error in
+            guard let self else { return }
+            if let error {
+                logger.error("\(error)")
+                return
+            }
+            if let result {
+                let sum = result.sumQuantity()?.doubleValue(for: .count())
+                logger.debug("\(sum ?? 0.0)")
+            }
+        }
+        healthStore.execute(query)
     }
 }
