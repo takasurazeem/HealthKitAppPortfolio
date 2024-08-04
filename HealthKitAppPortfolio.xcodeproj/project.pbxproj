@@ -13,6 +13,9 @@
 		F9E1E2232C5F62C600CF25A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E2222C5F62C600CF25A2 /* Preview Assets.xcassets */; };
 		F9E1E22C2C5F63B600CF25A2 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E22B2C5F63B600CF25A2 /* ActivityCard.swift */; };
 		F9E1E2312C5F63FA00CF25A2 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E2302C5F63FA00CF25A2 /* Activity.swift */; };
+		F9E1E2392C5F7FA400CF25A2 /* AppMainEntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E2382C5F7FA400CF25A2 /* AppMainEntryPoint.swift */; };
+		F9E1E23C2C5F801600CF25A2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E23B2C5F801600CF25A2 /* ProfileView.swift */; };
+		F9E1E23E2C5F82EA00CF25A2 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E23D2C5F82EA00CF25A2 /* Tabs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F9E1E2222C5F62C600CF25A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F9E1E22B2C5F63B600CF25A2 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		F9E1E2302C5F63FA00CF25A2 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		F9E1E2382C5F7FA400CF25A2 /* AppMainEntryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainEntryPoint.swift; sourceTree = "<group>"; };
+		F9E1E23B2C5F801600CF25A2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F9E1E23D2C5F82EA00CF25A2 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 		F9E1E2292C5F62FE00CF25A2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F9E1E23A2C5F800300CF25A2 /* Profile */,
+				F9E1E2372C5F7F7F00CF25A2 /* EntryPoint */,
 				F9E1E2352C5F7E5400CF25A2 /* Home */,
 			);
 			path = Modules;
@@ -129,6 +137,23 @@
 				F9E1E21C2C5F62C400CF25A2 /* HomeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F9E1E2372C5F7F7F00CF25A2 /* EntryPoint */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E23D2C5F82EA00CF25A2 /* Tabs.swift */,
+				F9E1E2382C5F7FA400CF25A2 /* AppMainEntryPoint.swift */,
+			);
+			path = EntryPoint;
+			sourceTree = "<group>";
+		};
+		F9E1E23A2C5F800300CF25A2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E23B2C5F801600CF25A2 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E1E23E2C5F82EA00CF25A2 /* Tabs.swift in Sources */,
 				F9E1E21D2C5F62C400CF25A2 /* HomeView.swift in Sources */,
+				F9E1E2392C5F7FA400CF25A2 /* AppMainEntryPoint.swift in Sources */,
 				F9E1E21B2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift in Sources */,
 				F9E1E2312C5F63FA00CF25A2 /* Activity.swift in Sources */,
+				F9E1E23C2C5F801600CF25A2 /* ProfileView.swift in Sources */,
 				F9E1E22C2C5F63B600CF25A2 /* ActivityCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

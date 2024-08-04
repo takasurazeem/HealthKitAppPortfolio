@@ -10,42 +10,33 @@ import SwiftUI
 struct ActivityCard: View {
     let activity: Activity
     var body: some View {
-        VStack {
-            VStack (alignment: .leading) {
-                HStack {
-                    Text(activity.title)
-                        .bold()
+        ZStack {
+            Color(uiColor: .systemGray6)
+                .cornerRadius(15)
+            VStack(spacing: 20) {
+                HStack(alignment: .top ) {
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text(activity.title)
+                            .font(.system(size: 16, weight: .bold))
+                        Text(activity.subtitle)
+                            .font(.system(size: 12, weight: .regular))
+                            .foregroundStyle(Color.gray)
+                    }
+                    
                     Spacer()
+                    
                     Image(systemName: activity.imageName)
                         .foregroundStyle(activity.iconColor)
                 }
-                Text(activity.subtitle)
-                    .font(.subheadline)
-                    .foregroundStyle(Color.gray)
+                
+                Text(activity.activityMeasure)
+                    .font(.system(size: 24))
             }
-            .padding(.top)
-            Text(activity.activityMeasure)
-                .bold()
-                .font(.title3)
-                .padding(.top, 10)
-            Spacer()
+            .padding()
         }
-        .padding(.horizontal, 16)
-        .frame(maxHeight: .infinity)
-        .background(Color.gray.opacity(0.12))
-        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 
 #Preview {
-    VStack {
-        HStack {
-            ActivityCard(activity: .todaySteps)
-            ActivityCard(activity: .todayCalories)
-        }
-        .padding(.horizontal)
-        .frame(height: 135)
-        Spacer()
-    }
-    .padding(.top, 44)
+    HomeView()
 }

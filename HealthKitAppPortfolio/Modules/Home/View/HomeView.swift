@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  HealthKitAppPortfolio
 //
 //  Created by Takasur Azeem on 8/4/24.
@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
+    
     var body: some View {
-        VStack {
+        LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2)) {
             ActivityCard(activity: .todaySteps)
-                .frame(width: 135, height: 200)
+            ActivityCard(activity: .todayCalories)
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }
