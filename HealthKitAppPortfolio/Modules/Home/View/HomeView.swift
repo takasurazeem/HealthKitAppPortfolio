@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject private var viewModel: HealthManager
+    
+    init(viewModel: HealthManager) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2)) {
@@ -19,5 +24,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(viewModel: HealthManager())
 }

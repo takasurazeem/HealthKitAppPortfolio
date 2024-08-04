@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F90A409D2C60058A0014F20B /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90A409C2C60058A0014F20B /* HealthManager.swift */; };
+		F90A409F2C6008BF0014F20B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90A409E2C6008BF0014F20B /* Logger.swift */; };
+		F90A40A22C6008DC0014F20B /* ConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90A40A12C6008DC0014F20B /* ConsoleLogger.swift */; };
 		F9E1E21B2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E21A2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift */; };
 		F9E1E21D2C5F62C400CF25A2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E21C2C5F62C400CF25A2 /* HomeView.swift */; };
 		F9E1E21F2C5F62C600CF25A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E21E2C5F62C600CF25A2 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F90A409C2C60058A0014F20B /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		F90A409E2C6008BF0014F20B /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F90A40A12C6008DC0014F20B /* ConsoleLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLogger.swift; sourceTree = "<group>"; };
 		F9E1E2172C5F62C400CF25A2 /* HealthKitAppPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitAppPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E1E21A2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAppPortfolioApp.swift; sourceTree = "<group>"; };
 		F9E1E21C2C5F62C400CF25A2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -43,6 +49,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F90A409B2C6005720014F20B /* HealthKitManager */ = {
+			isa = PBXGroup;
+			children = (
+				F90A409C2C60058A0014F20B /* HealthManager.swift */,
+			);
+			path = HealthKitManager;
+			sourceTree = "<group>";
+		};
+		F90A40A02C6008CC0014F20B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				F90A40A32C6008DF0014F20B /* Logging */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F90A40A32C6008DF0014F20B /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				F90A40A12C6008DC0014F20B /* ConsoleLogger.swift */,
+				F90A409E2C6008BF0014F20B /* Logger.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		F9E1E20E2C5F62C400CF25A2 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +93,7 @@
 		F9E1E2192C5F62C400CF25A2 /* HealthKitAppPortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				F90A40A02C6008CC0014F20B /* Foundation */,
 				F9E1E22A2C5F630400CF25A2 /* Components */,
 				F9E1E2292C5F62FE00CF25A2 /* Modules */,
 				F9E1E21A2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift */,
@@ -126,6 +158,7 @@
 		F9E1E2352C5F7E5400CF25A2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F90A409B2C6005720014F20B /* HealthKitManager */,
 				F9E1E2362C5F7E5C00CF25A2 /* View */,
 			);
 			path = Home;
@@ -229,10 +262,13 @@
 				F9E1E23E2C5F82EA00CF25A2 /* Tabs.swift in Sources */,
 				F9E1E21D2C5F62C400CF25A2 /* HomeView.swift in Sources */,
 				F9E1E2392C5F7FA400CF25A2 /* AppMainEntryPoint.swift in Sources */,
+				F90A40A22C6008DC0014F20B /* ConsoleLogger.swift in Sources */,
 				F9E1E21B2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift in Sources */,
+				F90A409F2C6008BF0014F20B /* Logger.swift in Sources */,
 				F9E1E2312C5F63FA00CF25A2 /* Activity.swift in Sources */,
 				F9E1E23C2C5F801600CF25A2 /* ProfileView.swift in Sources */,
 				F9E1E22C2C5F63B600CF25A2 /* ActivityCard.swift in Sources */,
+				F90A409D2C60058A0014F20B /* HealthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +402,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your health data allows us to provide personalized insights and recommendations to help you achieve your fitness and wellness goals. Your data will be securely stored and used solely to enhance your experience within the app.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -405,6 +442,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your health data allows us to provide personalized insights and recommendations to help you achieve your fitness and wellness goals. Your data will be securely stored and used solely to enhance your experience within the app.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

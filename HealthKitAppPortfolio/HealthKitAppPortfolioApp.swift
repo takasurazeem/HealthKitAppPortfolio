@@ -11,7 +11,9 @@ import SwiftUI
 struct HealthKitAppPortfolioApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            AppMainEntryPoint(
+                healthManager: HealthManager()
+            )
         }
     }
 }

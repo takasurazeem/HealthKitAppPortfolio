@@ -9,11 +9,16 @@ import SwiftUI
 
 struct AppMainEntryPoint: View {
     @State private var selectedTab: Tabs = .home
+    @ObservedObject private var healthManager: HealthManager
+    
+    init(healthManager: HealthManager) {
+        self.healthManager = healthManager
+    }
     
     var body: some View {
         TabView(selection: $selectedTab) {
             Tab("Home", systemImage: "house", value: .home) {
-                HomeView()
+                HomeView(viewModel: healthManager)
             }
             Tab("Profile", systemImage: "person", value: .profile) {
                 ProfileView()
@@ -23,6 +28,6 @@ struct AppMainEntryPoint: View {
 }
 
 #Preview {
-    AppMainEntryPoint()
+    AppMainEntryPoint(healthManager: HealthManager())
 }
  
