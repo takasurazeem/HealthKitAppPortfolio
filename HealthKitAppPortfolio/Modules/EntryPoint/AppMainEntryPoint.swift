@@ -17,12 +17,17 @@ struct AppMainEntryPoint: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Tab("Home", systemImage: "house", value: .home) {
-                HomeView(viewModel: healthManager)
-            }
-            Tab("Profile", systemImage: "person", value: .profile) {
-                ProfileView()
-            }
+            HomeView(viewModel: healthManager)
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+                .tag(Tabs.home)
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
+                .tag(Tabs.profile)
         }
     }
 }
