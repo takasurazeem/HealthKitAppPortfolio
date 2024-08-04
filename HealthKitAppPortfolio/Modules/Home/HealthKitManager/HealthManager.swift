@@ -42,7 +42,7 @@ class HealthManager: ObservableObject {
             error in
             guard let self else { return }
             if let error {
-                logger.error("\(error)")
+                logger.error("Error fetching today's steps: \(error)")
                 return
             }
             if let result {
