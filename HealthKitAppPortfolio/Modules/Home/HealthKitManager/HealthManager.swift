@@ -23,6 +23,26 @@ class HealthManager: ObservableObject {
         let steps = HKQuantityType(.stepCount)
         let calories = HKQuantityType(.activeEnergyBurned)
         let healthTypes: Set = [steps, calories]
+#if targetEnvironment(simulator)
+        activities = [
+            Activity(
+                id: 0,
+                title: "Today steps",
+                subtitle: "Goal: 10,000",
+                imageName: "figure.walk",
+                amount: 12314.formattedString,
+                iconColor: .green
+            ),
+            Activity(
+                id: 1,
+                title: "Today calories",
+                subtitle: "Goal: 300",
+                imageName: "flame",
+                amount: 130.formattedString,
+                iconColor: .red
+            )
+        ]
+#else
         Task {
             do {
                 try await healthStore.requestAuthorization(toShare: [], read: healthTypes)
@@ -32,6 +52,7 @@ class HealthManager: ObservableObject {
                 print(logger.error("\(error)"))
             }
         }
+#endif
     }
     
     func fetchTodaySteps() {
