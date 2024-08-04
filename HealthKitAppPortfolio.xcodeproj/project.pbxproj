@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F9E1E21B2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E21A2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift */; };
-		F9E1E21D2C5F62C400CF25A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E21C2C5F62C400CF25A2 /* ContentView.swift */; };
+		F9E1E21D2C5F62C400CF25A2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E21C2C5F62C400CF25A2 /* HomeView.swift */; };
 		F9E1E21F2C5F62C600CF25A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E21E2C5F62C600CF25A2 /* Assets.xcassets */; };
 		F9E1E2232C5F62C600CF25A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E1E2222C5F62C600CF25A2 /* Preview Assets.xcassets */; };
+		F9E1E22C2C5F63B600CF25A2 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E22B2C5F63B600CF25A2 /* ActivityCard.swift */; };
+		F9E1E2312C5F63FA00CF25A2 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E2302C5F63FA00CF25A2 /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F9E1E2172C5F62C400CF25A2 /* HealthKitAppPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitAppPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E1E21A2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAppPortfolioApp.swift; sourceTree = "<group>"; };
-		F9E1E21C2C5F62C400CF25A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F9E1E21C2C5F62C400CF25A2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F9E1E21E2C5F62C600CF25A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9E1E2202C5F62C600CF25A2 /* HealthKitAppPortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitAppPortfolio.entitlements; sourceTree = "<group>"; };
 		F9E1E2222C5F62C600CF25A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F9E1E22B2C5F63B600CF25A2 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		F9E1E2302C5F63FA00CF25A2 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,9 @@
 		F9E1E2192C5F62C400CF25A2 /* HealthKitAppPortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				F9E1E22A2C5F630400CF25A2 /* Components */,
+				F9E1E2292C5F62FE00CF25A2 /* Modules */,
 				F9E1E21A2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift */,
-				F9E1E21C2C5F62C400CF25A2 /* ContentView.swift */,
 				F9E1E21E2C5F62C600CF25A2 /* Assets.xcassets */,
 				F9E1E2202C5F62C600CF25A2 /* HealthKitAppPortfolio.entitlements */,
 				F9E1E2212C5F62C600CF25A2 /* Preview Content */,
@@ -67,6 +72,63 @@
 				F9E1E2222C5F62C600CF25A2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F9E1E2292C5F62FE00CF25A2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E2352C5F7E5400CF25A2 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F9E1E22A2C5F630400CF25A2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E22D2C5F63D600CF25A2 /* ActivityCard */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F9E1E22D2C5F63D600CF25A2 /* ActivityCard */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E22F2C5F63E400CF25A2 /* Model */,
+				F9E1E22E2C5F63E000CF25A2 /* View */,
+			);
+			path = ActivityCard;
+			sourceTree = "<group>";
+		};
+		F9E1E22E2C5F63E000CF25A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E22B2C5F63B600CF25A2 /* ActivityCard.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9E1E22F2C5F63E400CF25A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E2302C5F63FA00CF25A2 /* Activity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9E1E2352C5F7E5400CF25A2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E2362C5F7E5C00CF25A2 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F9E1E2362C5F7E5C00CF25A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9E1E21C2C5F62C400CF25A2 /* HomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E1E21D2C5F62C400CF25A2 /* ContentView.swift in Sources */,
+				F9E1E21D2C5F62C400CF25A2 /* HomeView.swift in Sources */,
 				F9E1E21B2C5F62C400CF25A2 /* HealthKitAppPortfolioApp.swift in Sources */,
+				F9E1E2312C5F63FA00CF25A2 /* Activity.swift in Sources */,
+				F9E1E22C2C5F63B600CF25A2 /* ActivityCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
